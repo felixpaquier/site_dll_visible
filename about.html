@@ -35,6 +35,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -226,6 +229,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -233,6 +299,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -277,9 +353,27 @@ $(document).ready(function () {
 </div>
 
 
-<div id="qui-sommes-nous" class="section level3">
-<h3>Qui sommes-nous ?</h3>
-<p>Cette page est en construction, son contenu sera disponible prochainement.</p>
+<p><font size="6" color="#4DA499"><strong>Qui sommes-nous ?</strong></font></p>
+<div id="lorigine-de-lassociation" class="section level1">
+<h1>L’origine de l’association</h1>
+<p><em>De loin en Loing</em> est une <strong>association créée en octobre 2016</strong> à la suite du mouvement de solidarité de citoyens de la commune d’Écuelles (Seine-et-Marne) et de ses environs pour venir en aide à une vingtaine de migrants arrivés en novembre 2015 à l’hôtel Formule 1 situé sur la commune.</p>
+</div>
+<div id="que-faisons-nous-actuellement" class="section level1">
+<h1>Que faisons-nous actuellement ?</h1>
+<p>Actuellement, nos actions comportent plusieurs volets :</p>
+<ul>
+<li><strong>Appui aux familles ou personnes seules migrantes </strong>: pour les démarches d’asile, pour le montage et le suivi de dossier d’autorisation de séjour, pour la scolarité, les démarches de santé, l’apprentissage du français…</li>
+<li><strong>Aide aux jeunes migrants, mineurs non-accompagnés ou jeunes majeurs</strong>, en collaboration avec le Collectif pour le droit des jeunes migrants (CDJM 77)</li>
+<li><strong>Hébergement solidaire via le <a href="#le-réseau-100-pour-1">« 100 pour un » </a></strong>: grâce aux dons réguliers de nos membres, nous louons trois appartements et une chambre qui nous permettent d’héberger trois familles à Montereau et Saint Mammès (77) et un jeune à Paris.</li>
+</ul>
+<p><strong><em>De loin en Loing</em></strong> <strong>a été reconnue d’intérêt général</strong> par la Direction départementale des finances publiques (DDFIP) de Seine-et-Marne en juin 2021.</p>
+</div>
+<div id="le-réseau-100-pour-1" class="section level1">
+<h1>Le réseau « 100 pour 1 »</h1>
+<p>Le <strong>mouvement des « 100 pour 1 »</strong> représente un immense élan de solidarité citoyenne en faveur des personnes exilées. Loin des fantasmes et du climat d’hostilité qui règne souvent à leur sujet, il est la preuve qu’un accueil bienveillant favorise les conditions pour que chacune et chacun trouve sa place dans la société.</p>
+<p>Composé de <strong>près de 70 associations locales réparties un peu partout en France</strong>, il répond aux besoins de logement de familles, pour la plupart sans papiers, qui, sans la solidarité des donateurs, se retrouveraient à la rue. Les associations du réseau des « 100 pour 1 » s’épaulent, échangent les bonnes pratiques et se soutiennent dans les difficultés rencontrées, notamment face au casse-tête administratif et légal auquel elles sont confrontées. Un exemple parmi tant d’autres : les personnes exilées n’ont pas le droit de travailler, mais doivent montrer des bulletins de salaire pour espérer être régularisées. Presque toutes les familles sont hébergées et soutenues jusqu’à ce qu’elles obtiennent leur régularisation, trouvent du travail, et un logement. C’est un accompagnement de longue haleine, sur plusieurs années, qui permet aux enfants d’avoir une scolarité régulière, souvent avec de belles réussites, et aide les parents, traumatisés par leur expérience, à se reconstruire.</p>
+<p>Au 1<sup>er</sup> juillet 2023, d’après une enquête auprès de 61 associations du réseau, <strong>les « 100 pour 1 » avaient accueilli, depuis l’origine, 716 familles représentant 3 015 personnes dont 1 666 enfants (424 familles, et 943 enfants étaient toujours accueillis au 1<sup>er</sup> juillet 2023 au sein des 61 associations)</strong>. Les 61 associations interrogées en juillet 2023 fonctionnent presque exclusivement avec des bénévoles (1 587 au moment de l’enquête), et récoltent des dons auprès de 11 061 donateurs ou adhérents, essentiellement des particuliers. <strong>Le budget total, en 2022, de ces 61 associations, était de 2,5 millions d’euros</strong>.</p>
+<p>Vous pouvez retrouver les associations du réseau des « 100 pour 1 » sur la <a href="https://umap.openstreetmap.fr/fr/map/carte-non-exhaustive-des-100-pour-1-de-france_555964#6/48.915/1.989" target="_blank">carte interactive</a>.</p>
 </div>
 
 <br>
@@ -289,6 +383,8 @@ $(document).ready(function () {
 <p style="text-align: center;"><font size="-2">Copyright &copy; 2024 DE LOIN EN LOING, Solidarité migrants</font></p>
 
 
+</div>
+</div>
 
 </div>
 
@@ -321,6 +417,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5,h6",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

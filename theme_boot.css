@@ -201,6 +201,35 @@ th {
   padding: 0;
 }
 
+/*FP : cadre agenda*/
+.agenda {
+  padding:10px 10px 10px 10px;
+  background-color:#ECECEC;
+  border-left: 7px solid;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-color: #4DA499;
+  line-height: 18px;
+}
+
+/*FP : ligne horizontale
+hr {
+  margin: 0 auto;
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:#595959;
+  height: 2px;
+}
+*/
+/*FP : ligne horizontale*/
+.actu {
+  padding:3px 3px 3px 3px;
+  line-height: 21px;
+}
+
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -1268,8 +1297,10 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 56px;
+  font-size: 20px; /* CHANGEMENT FP */
   font-weight: bold; /* AJOUT FP */
+  padding-top: 100px !important; /* AJOUT FP : je ne maîtrise pas trop, mais il faut utiliser padding ET !important pour que ça marche d'ajouter un espace au-dessus du paragraphe */
+  margin-bottom: 25px; /* AJOUT FP */
 }
 h2,
 .h2 {
@@ -5225,7 +5256,7 @@ a.thumbnail.active {
 .list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: #4DA499; /* CHANGEMENT FP : couleur de l'item sélectionné dans la toc */
   border-color: #2196f3;
 }
 .list-group-item.active .list-group-item-heading,
